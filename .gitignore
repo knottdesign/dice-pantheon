@@ -1,0 +1,4 @@
+# Unused campaign animations pulled from Kickstarter — 20MB and 17MB.
+# Far too heavy to serve as-is; kept locally in case we compress them to video later.
+images/pantheon-loop.gif
+images/roll-loop.gif
