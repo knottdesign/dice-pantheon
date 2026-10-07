@@ -629,6 +629,18 @@ html.dp-loading,html.dp-loading body{overflow:hidden;}
 
 /* ---------- tables ---------- */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,4vw,60px);}
+
+/* Specs run down the middle of the page. They used to sit in two columns, but
+   once the shipping table came out there was nothing to fill the second one */
+.specs-col{max-width:720px;margin:0 auto;}
+.specs-col > div + div{margin-top:clamp(42px,5vw,66px);}
+
+/* the die beside its own name in the weights table. At this size the internal
+   edges just muddy into a blob, so it shows as a solid silhouette instead */
+.dcell{white-space:nowrap;}
+.dcell .dieicon{width:15px;height:15px;vertical-align:-2px;margin-right:10px;flex:none;}
+.dcell .dieicon .face{fill:rgba(201,161,92,.85);stroke:none;}
+.dcell .dieicon .edge{display:none;}
 @media(max-width:900px){.two{grid-template-columns:1fr;}}
 table{width:100%;border-collapse:collapse;font-size:13.5px;}
 th,td{text-align:left;padding:13px 8px;border-bottom:1px solid var(--hair-soft);}
