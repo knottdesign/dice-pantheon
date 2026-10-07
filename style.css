@@ -762,3 +762,37 @@ html:has(body.home){scroll-snap-type:none!important;}
 /* no edge fades over a full-width slide: there is no next slide peeking out to
    hint at, and a gradient over the photograph just looks like a smudge */
 .slider .track-wrap::before,.slider .track-wrap::after{display:none;}
+
+/* Products opens on the edition, with the four things you can buy indented
+   under it. The rule down the left is what makes the nesting readable at a
+   glance rather than looking like five flat links. */
+.menu-list{min-width:290px;}
+.menu-top{font-family:var(--display);font-size:15px;}
+.menu-sub{margin-top:6px;padding-top:6px;padding-left:14px;
+  border-top:1px solid var(--hair);position:relative;}
+.menu-sub::before{content:"";position:absolute;left:4px;top:10px;bottom:8px;
+  width:1px;background:var(--hair);}
+.mobmenu .sub{padding-left:22px;font-size:15px;color:var(--mute);}
+
+/* the four products on Origin */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+  gap:clamp(16px,1.8vw,24px);}
+.pcard{border:1px solid var(--hair-soft);background:var(--void-2);
+  display:flex;flex-direction:column;
+  transition:border-color .45s var(--ease),background .45s var(--ease),transform .45s var(--ease);}
+.pcard:hover{border-color:var(--hair);background:var(--void-3);transform:translateY(-3px);}
+.pcard-shot{overflow:hidden;aspect-ratio:16/10;background:#000;}
+.pcard-shot img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease);}
+.pcard:hover .pcard-shot img{transform:scale(1.04);}
+.pcard-body{padding:clamp(20px,2vw,26px);display:flex;flex-direction:column;flex:1;}
+.pcard-body h3{margin:10px 0 10px;font-size:clamp(17px,1.7vw,21px);}
+.pcard-body p{font-size:13px;color:var(--mute);line-height:1.72;}
+.pcard-foot{display:flex;flex-direction:column;gap:6px;margin:18px 0 16px;
+  padding-top:16px;border-top:1px solid var(--hair-soft);}
+.pcard-foot .price{font-family:var(--display);font-size:clamp(18px,1.8vw,23px);}
+.pcard-foot .count{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);}
+.pcard .go{margin-top:auto;font-family:var(--mono);font-size:10px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--brass);}
+.masthead h1 .orig{font-style:italic;font-family:var(--script);
+  color:var(--brass);font-weight:300;}
