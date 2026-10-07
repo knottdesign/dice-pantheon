@@ -3,611 +3,202 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Dice Pantheon — Precision-Milled Metal Dice by KNOTT</title>
-<meta name="description" content="The first D&amp;D dice collection where the material matches the mettle of the class. 15 dice, 5 industrial metals, 7 finishing processes. Precision-milled in Toronto by KNOTT."/>
+<title>Dice Pantheon — Cast in Magic, Forged with Might</title>
+<meta name="description" content="Fifteen dice. Five industrial metals. Seven finishing processes. Machined from solid stock, never cast — the D&amp;D dice collection where the material matches the mettle of the class."/>
 <meta name="color-scheme" content="dark"/>
 <meta name="theme-color" content="#08080A"/>
 <meta property="og:title" content="Dice Pantheon — Cast in Magic, Forged with Might"/>
-<meta property="og:description" content="15 dice. 5 industrial metals. 7 finishing processes. The first D&amp;D dice collection where the material matches the mettle of the class."/>
-<meta property="og:image" content="images/pantheon-group.jpg"/>
+<meta property="og:description" content="Fifteen dice. Five industrial metals. Seven finishing processes. Machined, never cast."/>
+<meta property="og:image" content="images/hero-titan.webp"/>
 <meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet"/>
-<script>document.documentElement.className+=' js';</script>
-<style>
-:root{
-  --void:#08080A;
-  --panel:#101014;
-  --panel-2:#16161B;
-  --ink:#FFFFFF;
-  --mute:rgba(255,255,255,.58);
-  --faint:rgba(255,255,255,.34);
-  --hair:rgba(255,255,255,.10);
-  --hair-soft:rgba(255,255,255,.06);
-  --brass:#B8955A;
-  --arcane:#8E6FD4;
-  --display:'Cinzel',Georgia,serif;
-  --sans:'Inter',system-ui,-apple-system,sans-serif;
-  --ease:cubic-bezier(.16,1,.3,1);
-  --pad:clamp(20px,5vw,64px);
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  background:var(--void);color:var(--ink);
-  font-family:var(--sans);font-weight:300;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-  line-height:1.6;
-}
-img{max-width:100%;display:block;}
-a{color:inherit;text-decoration:none;}
-::selection{background:var(--brass);color:#000;}
-
-.wrap{max-width:1240px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
-.label{
-  font-size:10px;letter-spacing:4px;text-transform:uppercase;
-  color:var(--brass);margin-bottom:18px;font-weight:400;
-}
-h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.12;letter-spacing:.01em;}
-.lede{font-size:clamp(15px,1.5vw,17px);color:var(--mute);max-width:62ch;line-height:1.85;}
-
-/* scoped to .js so the page is fully readable if scripting never runs */
-.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
-.js .reveal.in{opacity:1;transform:none;}
-@media(prefers-reduced-motion:reduce){
-  .js .reveal{opacity:1!important;transform:none!important;transition:none!important;}
-  html{scroll-behavior:auto;}
-  .die:hover .shape i{transform:none!important;}
-}
-
-/* ── NAV ── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:16px var(--pad);
-  background:rgba(8,8,10,0);border-bottom:1px solid transparent;
-  transition:background .45s var(--ease),border-color .45s var(--ease),backdrop-filter .45s;
-}
-nav.stuck{background:rgba(8,8,10,.88);backdrop-filter:blur(14px);border-bottom-color:var(--hair);}
-.brand{font-family:var(--display);font-size:14px;letter-spacing:3px;text-transform:uppercase;}
-.brand small{display:block;font-family:var(--sans);font-size:8px;letter-spacing:3px;color:var(--faint);margin-top:3px;font-weight:300;}
-.nav-links{display:flex;gap:30px;font-size:11px;letter-spacing:2px;text-transform:uppercase;}
-.nav-links a{color:var(--mute);transition:color .25s;}
-.nav-links a:hover{color:var(--ink);}
-.nav-cta{
-  font-size:10px;letter-spacing:2px;text-transform:uppercase;
-  border:1px solid var(--hair);padding:9px 18px;color:var(--ink);
-  transition:background .3s,border-color .3s;
-}
-.nav-cta:hover{background:var(--brass);border-color:var(--brass);color:#000;}
-.mob-btn{display:none;background:none;border:0;cursor:pointer;padding:8px;flex-direction:column;gap:5px;margin-left:14px;}
-.mob-btn span{display:block;width:20px;height:1px;background:var(--ink);transition:transform .3s var(--ease),opacity .2s;}
-.mob-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg);}
-.mob-btn[aria-expanded="true"] span:nth-child(2){opacity:0;}
-.mob-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
-.mob-menu{
-  display:none;position:absolute;top:100%;left:0;right:0;
-  background:rgba(8,8,10,.97);backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--hair);flex-direction:column;
-}
-.mob-menu a{
-  padding:15px var(--pad);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;
-  color:var(--mute);border-top:1px solid var(--hair-soft);
-}
-.mob-menu a:hover{color:var(--ink);}
-.mob-menu.open{display:flex;}
-@media(max-width:860px){.nav-links{display:none;}.mob-btn{display:flex;}}
-
-/* ── HERO ── */
-.hero{position:relative;padding:150px 0 0;text-align:center;overflow:hidden;}
-.hero::before{
-  content:'';position:absolute;top:-10%;left:50%;transform:translateX(-50%);
-  width:min(1100px,130vw);aspect-ratio:1;border-radius:50%;
-  background:radial-gradient(circle,rgba(184,149,90,.13) 0%,rgba(142,111,212,.07) 42%,transparent 68%);
-  pointer-events:none;
-}
-.hero-inner{position:relative;z-index:2;}
-.hero h1{font-size:clamp(34px,6.4vw,78px);margin:16px 0 22px;}
-.hero h1 em{font-style:normal;color:var(--brass);}
-.hero-sub{font-size:clamp(14px,1.6vw,18px);color:var(--mute);max-width:56ch;margin:0 auto 38px;line-height:1.8;}
-.hero-cta{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:64px;}
-.btn{
-  display:inline-block;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;
-  padding:15px 34px;transition:all .3s var(--ease);border:1px solid transparent;
-}
-.btn-solid{background:var(--ink);color:#000;}
-.btn-solid:hover{background:var(--brass);}
-.btn-ghost{border-color:var(--hair);color:var(--ink);}
-.btn-ghost:hover{border-color:var(--ink);}
-.hero-plate{position:relative;z-index:2;margin:0 auto;max-width:1000px;padding:0 var(--pad);}
-.hero-plate img{width:100%;border:1px solid var(--hair);}
-
-/* ── FUNDED STRIP ── */
-.funded{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);margin-top:90px;background:var(--panel);}
-.funded-grid{display:grid;grid-template-columns:repeat(4,1fr);}
-.funded-cell{padding:34px 20px;text-align:center;border-right:1px solid var(--hair-soft);}
-.funded-cell:last-child{border-right:none;}
-.funded-num{font-family:var(--display);font-size:clamp(20px,2.6vw,32px);color:var(--ink);}
-.funded-num span{color:var(--brass);}
-.funded-cap{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);margin-top:8px;}
-@media(max-width:700px){.funded-grid{grid-template-columns:1fr 1fr;}
- .funded-cell:nth-child(2){border-right:none;}
- .funded-cell:nth-child(-n+2){border-bottom:1px solid var(--hair-soft);}}
-
-/* ── SECTIONS ── */
-section{padding:clamp(72px,10vw,130px) 0;}
-.sec-head{max-width:760px;margin-bottom:56px;}
-.sec-head h2{font-size:clamp(26px,3.8vw,46px);margin-bottom:20px;}
-
-/* premise pillars */
-.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair-soft);border:1px solid var(--hair-soft);margin-top:56px;}
-.pillar{background:var(--void);padding:32px 26px;}
-.pillar-n{font-family:var(--display);font-size:30px;color:var(--brass);margin-bottom:10px;}
-.pillar-t{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
-.pillar-d{font-size:13px;color:var(--faint);line-height:1.7;}
-@media(max-width:860px){.pillars{grid-template-columns:1fr 1fr;}}
-
-/* ── DICE SETS ── */
-.set{border-top:1px solid var(--hair);}
-.set-head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:64px;}
-.set-head .lede{max-width:none;}
-.set-mat{
-  margin-top:22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--faint);
-  padding-top:16px;border-top:1px solid var(--hair-soft);
-}
-.set-img{border:1px solid var(--hair);}
-/* campaign graphics are drawn on white — give them a deliberate plate rather than letting them punch a hole in the dark page */
-.plate{background:#F4F5F6;padding:clamp(14px,2vw,26px);border:1px solid var(--hair);}
-.plate img{width:100%;}
-.plate-cap{
-  font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
-  color:var(--faint);margin-top:14px;text-align:center;
-}
-@media(max-width:900px){.set-head{grid-template-columns:1fr;gap:32px;}}
-
-.dice-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1px;background:var(--hair-soft);border:1px solid var(--hair-soft);}
-.die{
-  background:var(--void);padding:30px 26px 32px;
-  display:flex;flex-direction:column;gap:14px;
-  transition:background .4s var(--ease);position:relative;
-}
-.die:hover{background:var(--panel-2);}
-.die-top{display:flex;align-items:center;gap:16px;}
-.shape{width:42px;height:42px;flex-shrink:0;position:relative;}
-.shape i{
-  position:absolute;inset:0;display:block;
-  background:var(--c,#999);
-  filter:brightness(1.05);
-  transition:transform .6s var(--ease);
-}
-.die:hover .shape i{transform:rotate(18deg) scale(1.06);}
-.s-d20 i{clip-path:polygon(50% 0,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);}
-.s-d12 i{clip-path:polygon(50% 0,100% 38%,81% 100%,19% 100%,0 38%);}
-.s-d10 i{clip-path:polygon(50% 0,100% 40%,50% 100%,0 40%);}
-.s-d8  i{clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);}
-.s-d6  i{clip-path:polygon(8% 8%,92% 8%,92% 92%,8% 92%);}
-.s-d4  i{clip-path:polygon(50% 4%,96% 92%,4% 92%);}
-.s-d100 i{clip-path:polygon(50% 0,100% 40%,50% 100%,0 40%);}
-.die-face{font-family:var(--display);font-size:13px;letter-spacing:2px;color:var(--faint);}
-.die-class{font-family:var(--display);font-size:19px;line-height:1.2;}
-.die-spec{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--brass);}
-.die-desc{font-size:13.5px;color:var(--mute);line-height:1.75;}
-.casters .die-spec{color:var(--arcane);}
-
-/* ── TITAN ── */
-.titan{position:relative;background:#000;padding:0;border-top:1px solid var(--hair);}
-.titan-media{position:relative;}
-.titan-media img{width:100%;height:clamp(340px,62vh,640px);object-fit:cover;opacity:.85;}
-.titan-media::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.25) 45%,rgba(8,8,10,.96) 100%);
-}
-.titan-copy{position:relative;z-index:2;margin-top:-140px;padding-bottom:clamp(72px,10vw,120px);text-align:center;}
-.titan-copy h2{font-size:clamp(30px,5vw,60px);margin-bottom:18px;}
-.titan-copy .lede{margin:0 auto;}
-.titan-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair-soft);border:1px solid var(--hair-soft);max-width:760px;margin:48px auto 0;}
-.tstat{background:var(--void);padding:26px 16px;}
-.tstat-v{font-family:var(--display);font-size:clamp(20px,2.8vw,30px);color:var(--brass);}
-.tstat-l{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);margin-top:8px;}
-
-/* ── COLLECTION ── */
-.collection{border-top:1px solid var(--hair);}
-.buy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--hair-soft);border:1px solid var(--hair-soft);margin-top:52px;}
-.buy{background:var(--void);padding:34px 28px;display:flex;flex-direction:column;gap:12px;transition:background .4s var(--ease);}
-.buy:hover{background:var(--panel-2);}
-.buy.feature{background:var(--panel);}
-.buy-tag{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brass);min-height:12px;}
-.buy-name{font-family:var(--display);font-size:22px;}
-.buy-desc{font-size:13px;color:var(--faint);line-height:1.7;flex:1;}
-.buy-price{font-family:var(--display);font-size:26px;margin-top:6px;}
-.buy-price small{font-size:11px;color:var(--faint);font-family:var(--sans);letter-spacing:1px;}
-.buy-link{
-  margin-top:10px;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
-  border-bottom:1px solid var(--hair);padding-bottom:6px;display:inline-flex;gap:8px;
-  transition:gap .3s var(--ease),border-color .3s,color .3s;align-self:flex-start;
-}
-.buy:hover .buy-link{gap:14px;border-color:var(--brass);color:var(--brass);}
-
-/* ── STORY ── */
-.story{border-top:1px solid var(--hair);background:var(--panel);}
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
-.people{display:flex;flex-direction:column;gap:26px;margin-top:8px;}
-.person{padding-left:20px;border-left:1px solid var(--hair);}
-.person-n{font-family:var(--display);font-size:16px;margin-bottom:6px;}
-.person-r{font-size:13px;color:var(--faint);line-height:1.7;}
-@media(max-width:900px){.story-grid{grid-template-columns:1fr;gap:36px;}}
-
-/* ── CLOSE ── */
-.close{text-align:center;border-top:1px solid var(--hair);}
-.close h2{font-size:clamp(28px,4.4vw,52px);margin-bottom:20px;}
-.close .lede{margin:0 auto 38px;}
-
-footer{border-top:1px solid var(--hair);padding:34px var(--pad);
-  display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
-  font-size:11px;color:var(--faint);}
-.foot-links{display:flex;gap:22px;}
-.foot-links a:hover{color:var(--ink);}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Inter:wght@200;300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<script>(function(d){d.className+=' js';if('IntersectionObserver' in window&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){d.className+=' rv-ready';setTimeout(function(){if(!window.__dpReady)d.className=d.className.replace(/ rv-ready/,'');},4000);}})(document.documentElement);</script>
 </head>
-<body>
+<body class="home">
 
-<nav id="nav">
-  <a href="#top" class="brand">Dice Pantheon<small>By KNOTT</small></a>
-  <div class="nav-links">
-    <a href="#martials">Martials</a>
-    <a href="#casters">Casters</a>
-    <a href="#titan">The Titan</a>
-    <a href="#collection">Collection</a>
-    <a href="#story">Story</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">Dice&nbsp;Pantheon</a>
+    <nav class="navlinks">
+      <a href="index.html" aria-current="page">Home</a>
+      <div class="menu">
+        <button type="button" aria-expanded="false" aria-haspopup="true">Products <span class="caret">&#9660;</span></button>
+        <div class="menu-list">
+          <a href="martials.html">The Martials<span>$499 CAD</span></a>
+          <a href="casters.html">The Casters<span>$149 CAD</span></a>
+          <a href="titan.html">The Titan<span>$289 CAD</span></a>
+          <a href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" target="_blank" rel="noopener">Pantheon of Heroes<span>All fifteen &middot; $937 CAD</span></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="next.html">What&rsquo;s Next</a>
+    </nav>
+    <a class="btn" href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" target="_blank" rel="noopener">Buy <span class="arw">&rarr;</span></a>
+    <button class="mobbtn" id="mobBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobMenu"><i></i></button>
   </div>
-  <div style="display:flex;align-items:center;">
-    <a href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" class="nav-cta" target="_blank" rel="noopener">Late Pledge</a>
-    <button class="mob-btn" id="mobBtn" aria-expanded="false" aria-controls="mobMenu" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mob-menu" id="mobMenu">
-    <a href="#martials">Martials</a>
-    <a href="#casters">Casters</a>
-    <a href="#titan">The Titan</a>
-    <a href="#collection">Collection</a>
-    <a href="#story">Story</a>
-  </div>
-</nav>
-
-<!-- ── HERO ── -->
-<header class="hero" id="top">
-  <div class="hero-inner wrap">
-    <p class="label">15 Dice · 5 Metals · 7 Finishes</p>
-    <h1>Cast in Magic.<br/><em>Forged with Might.</em></h1>
-    <p class="hero-sub">The first D&amp;D dice collection where the material matches the mettle of the class. Precision-milled from five industrial metals — not cast from one.</p>
-    <div class="hero-cta">
-      <a href="#collection" class="btn btn-solid">See the Collection</a>
-      <a href="#martials" class="btn btn-ghost">Meet the Dice</a>
+  <div class="mobmenu" id="mobMenu">
+    <div class="wrap">
+      <a href="index.html">Home</a>
+      <a href="martials.html">The Martials</a>
+      <a href="casters.html">The Casters</a>
+      <a href="titan.html">The Titan</a>
+      <a href="about.html">About</a>
+      <a href="next.html">What&rsquo;s Next</a>
     </div>
-  </div>
-  <div class="hero-plate">
-    <img src="images/pantheon-group.jpg" alt="The complete Dice Pantheon collection — fifteen metal dice arranged in a ring around the 35mm titanium Titan D20" width="680" height="453"/>
   </div>
 </header>
 
-<!-- ── FUNDED ── -->
-<div class="funded">
-  <div class="funded-grid">
-    <div class="funded-cell"><div class="funded-num"><span>829%</span></div><div class="funded-cap">Funded</div></div>
-    <div class="funded-cell"><div class="funded-num">CA$16,493</div><div class="funded-cap">Pledged</div></div>
-    <div class="funded-cell"><div class="funded-num">53</div><div class="funded-cap">Backers</div></div>
-    <div class="funded-cell"><div class="funded-num">Toronto</div><div class="funded-cap">Designed &amp; Engineered</div></div>
-  </div>
-</div>
+<main>
 
-<!-- ── PREMISE ── -->
-<section id="premise">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="label reveal">The Premise</p>
-      <h2 class="reveal">Your character is legendary.<br/>Your dice should be too.</h2>
-      <p class="lede reveal">A hero is an adventurer who gains power through perseverance — their spirit defined by their party, their deeds, and their class. So we built a die for each one, and let the metal carry the meaning.</p>
-    </div>
-    <p class="lede reveal">Most metal dice are cast from a single uniform alloy. Dice Pantheon is machined — industrial multi-axis CNC work that carves a unique density and weight for every single die, then finishes each one differently. Seven processes in all, from multi-colour electroplating to industrial chemical bluing to forced antique patinas.</p>
-    <div class="pillars">
-      <div class="pillar reveal"><div class="pillar-n">15</div><div class="pillar-t">Dice</div><div class="pillar-d">Two complete sets, plus the Titan.</div></div>
-      <div class="pillar reveal"><div class="pillar-n">5</div><div class="pillar-t">Metals</div><div class="pillar-d">Titanium, steel, copper, brass, aluminum.</div></div>
-      <div class="pillar reveal"><div class="pillar-n">7</div><div class="pillar-t">Finishes</div><div class="pillar-d">Electroplating, bluing, patina, polish.</div></div>
-      <div class="pillar reveal"><div class="pillar-n">0</div><div class="pillar-t">Castings</div><div class="pillar-d">Every die milled, never poured.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ── MARTIALS ── -->
-<section class="set" id="martials">
-  <div class="wrap">
-    <div class="set-head">
-      <div>
-        <p class="label reveal">Set One</p>
-        <h2 class="reveal" style="font-size:clamp(26px,3.8vw,46px);margin-bottom:20px;">The Martials</h2>
-        <p class="lede reveal">Warriors rely on their weapons and the strength of their arms. For the Martials we chose heavy solid metals — cold to the touch, heavy in the hand, and landing on the table with a satisfying thunk.</p>
-        <p class="set-mat reveal">Titanium · Stainless Steel · Copper · Brass</p>
+  <!-- 1 · Hero: on scroll, the name slides in from the left and the slogan from the right -->
+  <section class="intro" id="intro">
+    <div class="intro-sticky">
+      <div class="intro-type">
+        <div class="intro-a"><span class="mark">Dice Pantheon</span></div>
+        <div class="intro-b"><span class="slogan">Cast in Magic. Forged with Might.</span></div>
       </div>
-      <div class="reveal">
-        <div class="plate">
-          <img src="images/specs-01.jpg" alt="The Martials weighed individually: D4 Monk 8.49g brushed brass, D6 Rogue blued steel, D8 Paladin mirror polished brass, D10 Ranger antique copper, D100 Fighter mirror polished steel, D12 Barbarian antique steel, D20 Frontline mirror polished TC4 titanium" loading="lazy"/>
+      <div class="hero-cue"><span>Scroll</span><span class="line"></span></div>
+    </div>
+  </section>
+
+  <!-- 2 · The products, one per slide -->
+  <section class="sec band auto-h" id="products">
+    <div class="wrap">
+      <div class="carousel slider rv" data-carousel>
+        <div class="carousel-head">
+          <div>
+            <p class="eyebrow">The Collection</p>
+            <h2 style="margin-top:18px;">Four ways in.</h2>
+          </div>
+          <div class="carousel-nav">
+            <button class="cbtn" data-dir="-1" aria-label="Previous product">&larr;</button>
+            <button class="cbtn" data-dir="1" aria-label="Next product">&rarr;</button>
+          </div>
         </div>
-        <p class="plate-cap">Every die weighed — mixed metal set</p>
-      </div>
-    </div>
-
-    <div class="dice-grid">
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d20" style="--c:linear-gradient(140deg,#E2E6EA,#9BA3AA)"><i style="background:linear-gradient(140deg,#E2E6EA,#9BA3AA)"></i></div><div class="die-face">D20</div></div>
-        <h3 class="die-class">The Frontline</h3>
-        <div class="die-spec">TC4 Titanium · Fine Polished</div>
-        <p class="die-desc">Titanium is the king of metals — light, non-corrosive, notoriously difficult to machine. We chose it for the D20 because it represents the leader: unbreakable and tireless.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d12"><i style="background:linear-gradient(140deg,#9EA2A4,#63676A)"></i></div><div class="die-face">D12</div></div>
-        <h3 class="die-class">The Barbarian</h3>
-        <div class="die-spec">Stainless Steel · Stonewashed</div>
-        <p class="die-desc">A battle-worn finish drawing on primal rage. Like a greataxe that has seen a thousand wars — gritty, textured, and ready to cleave.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d100"><i style="background:linear-gradient(140deg,#F0F3F6,#AEB5BB)"></i></div><div class="die-face">D100</div></div>
-        <h3 class="die-class">The Fighter</h3>
-        <div class="die-spec">Stainless Steel · Mirror Polish</div>
-        <p class="die-desc">No tricks, just mastery. The Fighter is the backbone of the party and steel is the backbone of the world — polished to perfection. Heavy, cold, precise.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d10"><i style="background:linear-gradient(140deg,#C07A50,#8A4A2E)"></i></div><div class="die-face">D10</div></div>
-        <h3 class="die-class">The Ranger</h3>
-        <div class="die-spec">Pure Copper · Forced Patina</div>
-        <p class="die-desc">Rangers don't need to shine; they need to survive. No two are alike — and as a living metal, this copper keeps ageing into a patina entirely its own.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d8"><i style="background:linear-gradient(140deg,#F0D27A,#B98F30)"></i></div><div class="die-face">D8</div></div>
-        <h3 class="die-class">The Paladin</h3>
-        <div class="die-spec">Solid Brass · Mirror Finish</div>
-        <p class="die-desc">Shining like gold in the face of adversity, with the holy aura of a divine knight. Heavy in the hand, it carries the weight of your oath.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d6"><i style="background:linear-gradient(140deg,#3C4B5A,#1E2833)"></i></div><div class="die-face">D6</div></div>
-        <h3 class="die-class">The Rogue</h3>
-        <div class="die-spec">Chemically Blued Steel</div>
-        <p class="die-desc">Draped in shadow. An industrial bluing process — historically used to darken blades — eliminates glint. Your silent partner when striking from the dark.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d4"><i style="background:linear-gradient(140deg,#C9A45E,#8E6C32)"></i></div><div class="die-face">D4</div></div>
-        <h3 class="die-class">The Monk</h3>
-        <div class="die-spec">Solid Brass · Brushed</div>
-        <p class="die-desc">Brass for the bruisers. Unlike the Paladin's shine, this finish feels like an ancient temple gong or a hardened knuckle duster. It strikes with distinct impact.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ── CASTERS ── -->
-<section class="set casters" id="casters">
-  <div class="wrap">
-    <div class="set-head">
-      <div>
-        <p class="label reveal" style="color:var(--arcane)">Set Two</p>
-        <h2 class="reveal" style="font-size:clamp(26px,3.8vw,46px);margin-bottom:20px;">The Casters</h2>
-        <p class="lede reveal">Magic is vibrant, energetic, and defies reality itself. We chose industrial aluminum — light, precise, and able to hold vivid colour through advanced anodisation and electroplating, representing the full spectrum of the arcane weave.</p>
-        <p class="set-mat reveal">Precision-Milled Aluminum</p>
-      </div>
-      <div class="reveal">
-        <div class="plate">
-          <img src="images/casters-group.jpg" alt="The Casters — seven anodised aluminum dice in electric pink, forest green, sapphire blue, rainbow chrome, void black, royal gold and radiant silver" loading="lazy"/>
+        <div class="track-wrap">
+        <div class="track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="The collection">
+          <article class="slide" aria-label="The Martials" aria-roledescription="slide" aria-posinset="1" aria-setsize="4">
+            <div class="slide-shot"><img src="images/card-martials.webp" alt="The seven Martials dice on a dark reflective surface." fetchpriority="high" width="1200" height="750"/></div>
+            <div class="slide-body">
+              <span class="eyebrow">Set of seven</span>
+              <h3>The Martials</h3>
+              <p>Seven dice in titanium, steel, copper and brass, each finished to match the class that carries it. Heavy and cold in the hand, they land with a thunk you feel through the wood.</p>
+              <div class="slide-foot">
+                <span class="price">$499 CAD</span>
+                <span class="count">Seven dice &middot; 184.90 g total</span>
+              </div>
+              <div class="acts">
+                <a class="btn solid" href="martials.html">See the Martials <span class="arw">&rarr;</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="slide" aria-label="The Casters" aria-roledescription="slide" aria-posinset="2" aria-setsize="4">
+            <div class="slide-shot"><img src="images/card-casters.webp" alt="The seven Casters dice laid out on black grit." loading="lazy" width="1200" height="750"/></div>
+            <div class="slide-body">
+              <span class="eyebrow">Set of seven</span>
+              <h3>The Casters</h3>
+              <p>Seven dice milled from aluminum and anodised across the whole arcane spectrum, from rainbow chrome to void black. Light, precise, and impossible to ignore.</p>
+              <div class="slide-foot">
+                <span class="price">$149 CAD</span>
+                <span class="count">Seven dice &middot; 69.14 g total</span>
+              </div>
+              <div class="acts">
+                <a class="btn solid" href="casters.html">See the Casters <span class="arw">&rarr;</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="slide" aria-label="The Titan" aria-roledescription="slide" aria-posinset="3" aria-setsize="4">
+            <div class="slide-shot"><img src="images/card-titan.webp" alt="The 35mm titanium Titan beside a standard D20." loading="lazy" width="1200" height="750"/></div>
+            <div class="slide-body">
+              <span class="eyebrow">Single die</span>
+              <h3>The Titan</h3>
+              <p>A 35 mm D20 cut from a single billet of aerospace titanium. At 121 grams it does not roll so much as collide.</p>
+              <div class="slide-foot">
+                <span class="price">$289 CAD</span>
+                <span class="count">One die &middot; 35 mm &middot; 121.07 g</span>
+              </div>
+              <div class="acts">
+                <a class="btn solid" href="titan.html">See the Titan <span class="arw">&rarr;</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="slide" aria-label="Pantheon of Heroes" aria-roledescription="slide" aria-posinset="4" aria-setsize="4">
+            <div class="slide-shot"><img src="images/card-pantheon.webp" alt="All fifteen dice of the Pantheon on black grit." loading="lazy" width="1200" height="750"/></div>
+            <div class="slide-body">
+              <span class="eyebrow">The complete collection</span>
+              <h3>Pantheon of Heroes</h3>
+              <p>All fifteen dice, both sets and the Titan together. Every metal and every finish in the collection, in one case.</p>
+              <div class="slide-foot">
+                <span class="price">$937 CAD</span>
+                <span class="count">Fifteen dice &middot; both sets and the Titan</span>
+              </div>
+              <div class="acts">
+                <a class="btn solid" href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" target="_blank" rel="noopener">Buy on Kickstarter <span class="arw">&rarr;</span></a>
+              </div>
+            </div>
+          </article>
         </div>
-        <p class="plate-cap">Seven finishes, one metal</p>
+        </div>
+        <div class="sfoot">
+          <div class="sdots" aria-label="Choose a product"></div>
+          <p class="scount">1 / 4</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="dice-grid">
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d20"><i style="background:conic-gradient(from 210deg,#F04FA0,#F5C542,#3ED99A,#3FA9F5,#8E6FD4,#F04FA0)"></i></div><div class="die-face">D20</div></div>
-        <h3 class="die-class">The Weave</h3>
-        <div class="die-spec">Rainbow Chrome Electroplating</div>
-        <p class="die-desc">Magic comes in every colour, from the auroras of the north to the mage's prismatic spray. This mirror-like prism shifts with every roll — chaos, beauty, infinite possibility.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d12"><i style="background:linear-gradient(140deg,#FF52A8,#C2196E)"></i></div><div class="die-face">D12</div></div>
-        <h3 class="die-class">The Bard</h3>
-        <div class="die-spec">Electric Pink</div>
-        <p class="die-desc">Precious as a poem, sharp as a lyric. Bards demand centre stage — bold, neon, impossible to ignore. Designed to entrance minds and put all eyes on you.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d10"><i style="background:linear-gradient(140deg,#24242A,#0B0B0E)"></i></div><div class="die-face">D10</div></div>
-        <h3 class="die-class">The Warlock</h3>
-        <div class="die-spec">Void Black</div>
-        <p class="die-desc">A pact that binds; a quest that blinds. As dark as the ink of the contract you signed — a matte surface that seems to absorb light itself.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d100"><i style="background:linear-gradient(140deg,#FFFFFF,#B4BAC1)"></i></div><div class="die-face">D100</div></div>
-        <h3 class="die-class">The Cleric</h3>
-        <div class="die-spec">Radiant Silver</div>
-        <p class="die-desc">A beacon of divinity. A brilliant sterling sheen for holy light in the darkest dungeons — for the healer who must persevere, shining with purity and purpose.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d8"><i style="background:linear-gradient(140deg,#FFC44D,#C07E10)"></i></div><div class="die-face">D8</div></div>
-        <h3 class="die-class">The Sorcerer</h3>
-        <div class="die-spec">Royal Gold</div>
-        <p class="die-desc">Some study magic; you are magic. Whether inherited from dragons or the deep, your power is innate — effortlessly effective and undeniably valuable.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d6"><i style="background:linear-gradient(140deg,#3B82F6,#12409B)"></i></div><div class="die-face">D6</div></div>
-        <h3 class="die-class">The Wizard</h3>
-        <div class="die-spec">Deep Sapphire Blue</div>
-        <p class="die-desc">The colour of pure knowledge and the depths of the mind. Wizards are the architects of reality — ready to roast a room with a Fireball, or decode the universe.</p>
-      </article>
-
-      <article class="die reveal">
-        <div class="die-top"><div class="shape s-d4"><i style="background:linear-gradient(140deg,#3FBF5F,#1C6B33)"></i></div><div class="die-face">D4</div></div>
-        <h3 class="die-class">The Druid</h3>
-        <div class="die-spec">Verdant Forest Green</div>
-        <p class="die-desc">Green as the canopy, lethal as a leopard. A rich emerald tone that connects you to the earth — for Wild-Shaping into a beast, or calling down the storm.</p>
-      </article>
-    </div>
-
-    <div class="reveal" style="margin-top:56px;">
-      <div class="plate">
-        <img src="images/specs-02.jpg" alt="The Casters weighed individually: D4 Druid 3.23g, D6 Wizard 10.75g, D8 Sorcerer 9.27g, D10 Warlock 8.62g, D100 Cleric 8.6g, D12 Bard 14.79g, D20 Weave 13.88g" loading="lazy"/>
+  <!-- 3 &middot; A little more on what this is -->
+  <section class="sec band auto-h" id="story">
+    <div class="wrap">
+      <div class="aboutus">
+        <div class="rv">
+          <p class="eyebrow">What Dice Pantheon Is</p>
+          <h2 style="margin:20px 0 24px;">A die for every class.</h2>
+          <p class="lede">Fifteen dice for Dungeons &amp; Dragons, where the material matches the mettle of the class that rolls it. Titanium for the leader, blued steel for the rogue, copper that keeps ageing for the ranger.</p>
+          <p class="lede" style="margin-top:20px;">Most metal dice are poured from one alloy and tumbled. Every die here is machined from solid stock on multi&#8209;axis CNC and finished by a process chosen for its class &mdash; which is the whole reason the set feels the way it does.</p>
+          <div class="acts" style="margin-top:32px;">
+            <a class="btn solid" href="about.html">Our Story <span class="arw">&rarr;</span></a>
+            <a class="btn" href="next.html">What&rsquo;s Next</a>
+          </div>
+        </div>
+        <div class="rv wipe">
+          <figure class="plate-fig" style="max-width:none;padding:0;margin:0;">
+            <img src="images/hero-titan.webp" alt="The 35mm titanium Titan beside a standard D20, resting on black grit." loading="lazy" width="2400" height="1600"/>
+            <figcaption><span class="eyebrow">The Titan</span><span>35&nbsp;mm &middot; 121.07&nbsp;g</span></figcaption>
+          </figure>
+        </div>
       </div>
-      <p class="plate-cap">Every die weighed — aluminum set</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── TITAN ── -->
-<section class="titan" id="titan">
-  <div class="titan-media">
-    <img src="images/titan-01.jpg" alt="The Titan — a 35mm solid titanium D20 beside a standard-size die for scale" loading="lazy"/>
-  </div>
-  <div class="titan-copy wrap">
-    <p class="label reveal">The Centrepiece</p>
-    <h2 class="reveal">The Titan</h2>
-    <p class="lede reveal">We didn't just want to make a big die; we wanted to machine a monolith. Milled from a single massive billet of aerospace TC4 titanium, it towers over standard dice and dominates the table.</p>
-    <p class="lede reveal" style="margin-top:20px;">With a crushing weight of 121.07 grams, the Titan carries an inertia no other material can match. It doesn't roll — it collides. When it lands, the fate of the party is sealed.</p>
-    <div class="titan-stats">
-      <div class="tstat reveal"><div class="tstat-v">35mm</div><div class="tstat-l">Across</div></div>
-      <div class="tstat reveal"><div class="tstat-v">121.07g</div><div class="tstat-l">Weight</div></div>
-      <div class="tstat reveal"><div class="tstat-v">TC4</div><div class="tstat-l">Aerospace Titanium</div></div>
-    </div>
-    <div class="reveal" style="max-width:760px;margin:36px auto 0;">
-      <div class="plate">
-        <img src="images/titan-02.jpg" alt="Scale comparison: the 35mm Titan D20 weighs 121.07 grams against a standard 20mm D20 at 22.51 grams" loading="lazy"/>
-      </div>
-      <p class="plate-cap">121.07g against a standard 20mm D20 at 22.51g</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── COLLECTION ── -->
-<section class="collection" id="collection">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="label reveal">The Collection</p>
-      <h2 class="reveal">Choose your arsenal.</h2>
-      <p class="lede reveal">Take a single set, claim the Titan alone, or bring home the complete Pantheon — 15 dice, 5 metals and 7 finishing techniques in one masterpiece.</p>
-    </div>
-    <div class="buy-grid">
-      <a class="buy reveal" href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" target="_blank" rel="noopener">
-        <div class="buy-tag"></div>
-        <div class="buy-name">The Casters</div>
-        <p class="buy-desc">Seven precision-milled aluminum dice, from the Rainbow Chrome Weave to the Verdant Druid.</p>
-        <div class="buy-price">$149 <small>CAD</small></div>
-        <span class="buy-link">Pledge →</span>
-      </a>
-      <a class="buy reveal" href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" target="_blank" rel="noopener">
-        <div class="buy-tag"></div>
-        <div class="buy-name">The Titan</div>
-        <p class="buy-desc">The 35mm solid titanium D20. A die even the gods fear — and the ultimate tool for the Dungeon Master.</p>
-        <div class="buy-price">$289 <small>CAD</small></div>
-        <span class="buy-link">Pledge →</span>
-      </a>
-      <a class="buy reveal" href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" target="_blank" rel="noopener">
-        <div class="buy-tag"></div>
-        <div class="buy-name">The Martials</div>
-        <p class="buy-desc">Seven dice in titanium, steel, copper and brass — each finished to match its class.</p>
-        <div class="buy-price">$499 <small>CAD</small></div>
-        <span class="buy-link">Pledge →</span>
-      </a>
-      <a class="buy feature reveal" href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" target="_blank" rel="noopener">
-        <div class="buy-tag">The Complete Collection</div>
-        <div class="buy-name">Pantheon of Heroes</div>
-        <p class="buy-desc">All 15 dice. Every weight class, every damage type — from the 35mm thud of the Titan to the shimmer of the Rainbow D20.</p>
-        <div class="buy-price">$937 <small>CAD</small></div>
-        <span class="buy-link">Pledge →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ── STORY ── -->
-<section class="story" id="story">
-  <div class="wrap story-grid">
-    <div>
-      <p class="label reveal">Our Story</p>
-      <h2 class="reveal" style="font-size:clamp(24px,3.2vw,40px);margin-bottom:20px;">It started with a campaign<br/>and an MBA.</h2>
-      <p class="lede reveal">We met in Toronto during our MBA — a bond cemented not just by shared projects, but by a shared love of Dungeons &amp; Dragons. It became the game that connected us and the creative outlet that kept us inspired.</p>
-      <p class="lede reveal" style="margin-top:18px;">Dice Pantheon is the natural intersection of our professional expertise and our personal passion: the dice sets of our dreams, made to elevate the experience every time we play.</p>
-    </div>
-    <div class="people">
-      <div class="person reveal">
-        <div class="person-n">Mandana</div>
-        <p class="person-r">Over ten years in R&amp;D and architecture. Brings an obsession with structure and material science, ensuring every die is a precision-engineered instrument.</p>
-      </div>
-      <div class="person reveal">
-        <div class="person-n">Catherine</div>
-        <p class="person-r">A decade of expertise in operations. Makes certain every detail — from the weight in your hand to the final experience — is seamless.</p>
-      </div>
-      <div class="person reveal">
-        <div class="person-n">Parmeet</div>
-        <p class="person-r">Has run D&amp;D games for nearly a decade, carrying the hobby across many adventures. Ensures every design upholds the spirit of the game and feels as good to roll as it looks to display.</p>
+      <div class="pillars rv" style="margin-top:clamp(44px,5vw,70px);">
+        <div class="pillar"><div class="n">15</div><div class="t">Dice</div><p>Two complete seven-die sets, plus the Titan.</p></div>
+        <div class="pillar"><div class="n">5</div><div class="t">Metals</div><p>Titanium, stainless steel, copper, brass, aluminum.</p></div>
+        <div class="pillar"><div class="n">7</div><div class="t">Finishes</div><p>Electroplate, blue, patina, stonewash, polish, brush, anodise.</p></div>
+        <div class="pillar"><div class="n">0</div><div class="t">Castings</div><p>Every die milled from solid stock. Never poured.</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── CLOSE ── -->
-<section class="close">
-  <div class="wrap">
-    <p class="label reveal">Late Pledge Open</p>
-    <h2 class="reveal">May your hits be crits.</h2>
-    <p class="lede reveal">Funded at 829% by 53 backers. The Pantheon is still available through our Kickstarter campaign.</p>
-    <a href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" class="btn btn-solid reveal" target="_blank" rel="noopener">Back the Pantheon</a>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div>© 2026 KNOTT. Designed and engineered in Toronto.</div>
-  <div class="foot-links">
-    <a href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" target="_blank" rel="noopener">Kickstarter</a>
-    <a href="https://www.knottdesign.ca" target="_blank" rel="noopener">KNOTT</a>
-    <a href="mailto:Connect@knottdesign.ca">Contact</a>
+  <div class="wrap foot">
+    <a href="index.html" class="brand">Dice&nbsp;Pantheon</a>
+    <nav class="footlinks">
+      <a href="martials.html">Martials</a>
+      <a href="casters.html">Casters</a>
+      <a href="titan.html">Titan</a>
+      <a href="about.html">About</a>
+      <a href="next.html">What&rsquo;s Next</a>
+      <a href="https://www.kickstarter.com/projects/knottx/dice-pantheon-cast-in-magic-forged-in-might" target="_blank" rel="noopener">Kickstarter</a>
+    </nav>
+  </div>
+  <div class="wrap" style="margin-top:28px;">
+    <p class="small">© 2026 KNOTT · Designed and engineered in Toronto</p>
   </div>
 </footer>
 
-<script>
-(function(){
-  var nav=document.getElementById('nav');
-  function onScroll(){ nav.classList.toggle('stuck', window.scrollY>40); }
-  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
-
-  var btn=document.getElementById('mobBtn'), menu=document.getElementById('mobMenu');
-  function setMenu(open){ menu.classList.toggle('open',open); btn.setAttribute('aria-expanded',open?'true':'false'); }
-  btn.addEventListener('click',function(){ setMenu(!menu.classList.contains('open')); });
-  menu.addEventListener('click',function(e){ if(e.target.tagName==='A') setMenu(false); });
-
-  var els=document.querySelectorAll('.reveal');
-  function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
-
-  if(!('IntersectionObserver' in window)){ showAll(); return; }
-
-  var fired=false;
-  var io=new IntersectionObserver(function(entries){
-    fired=true;
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  },{threshold:.12,rootMargin:'0px 0px -50px 0px'});
-  els.forEach(function(el,i){ el.style.transitionDelay=(i%4)*0.07+'s'; io.observe(el); });
-
-  // if the observer never reports back, reveal everything rather than leave the page blank
-  setTimeout(function(){ if(!fired) showAll(); },2500);
-})();
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>

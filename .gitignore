@@ -2,3 +2,18 @@
 # Far too heavy to serve as-is; kept locally in case we compress them to video later.
 images/pantheon-loop.gif
 images/roll-loop.gif
+
+# Local preview server used during development; not part of the published site.
+.claude/
+
+# The original shoot: 414 JPGs, 319 RAW files and 101 videos, 19GB in all.
+# The site only ever serves the processed copies in images/, so none of this
+# belongs in the repo — pushing it would be far over GitHub's limits.
+new-photos/
+
+# Earlier drafts of the home page. Kept on disk for reference, but publishing
+# them would leave old versions of the site publicly reachable by URL.
+index-v*.html
+
+# Turntable frames for a hero sequence no live page uses any more.
+frames/
